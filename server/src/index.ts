@@ -10,6 +10,7 @@ import taskRoutes from "./Routes/taskRoutes";
 import searchRoutes from "./Routes/searchRoutes";
 import userRoutes from "./Routes/userRoutes";
 import teamRoutes from "./Routes/teamRoutes";
+
 dotenv.config();
 const port = Number(process.env.PORT) || 3000;
 
@@ -36,6 +37,6 @@ app.use("/search", searchRoutes);
 app.use("/users", userRoutes);
 app.use("/teams", teamRoutes);
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log(`Server running on port ${port}`);
 });
